@@ -10,5 +10,6 @@
     <orderEntry type="library" name="cglib-nodep-3.2.4 (4)" level="application" />
     <orderEntry type="library" name="async-http-client-2.12.3" level="application" />
     <orderEntry type="library" name="byte-buddy-1.8.15" level="application" />
+    <orderEntry type="library" name="testng" level="project" />
   </component>
 </module>
