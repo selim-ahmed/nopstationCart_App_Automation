@@ -14,12 +14,12 @@ public class nopstationcart{
 
     public static void main(String args[]) throws MalformedURLException {
 
-
         DesiredCapabilities dc = new DesiredCapabilities();
-        dc.setCapability(MobileCapabilityType.DEVICE_NAME, value:"emulator-5554");
-        dc.setCapability(capabilityName: "platformName", value: "android");
+        dc.setCapability(MobileCapabilityType.DEVICE_NAME, "emulator-5554");
+        dc.setCapability("platformName",  "android");
 
-        androidDriver<androidElement> ad = new androidDriver<androidElement>(new URL("http://127.0.0.1:4723/wd/hub",dc));
+        //AndroidDriver<AndroidElement> ad = new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub",dc));
+        AndroidDriver ad = new AndroidDriver(new URL("127.0.0.1:4723/wd/hub"), dc);
 
 
         MobileElement el1 = (MobileElement) ad.findElementByAccessibilityId("NopStation Cart");
@@ -94,7 +94,7 @@ public class nopstationcart{
         MobileElement el35 = (MobileElement) ad.findElementById("com.nopstation.nopcommerce.nopstationcart:id/md_button_negative");
         el35.click();
 
-        Assert.assertEquals(ad.findElementById(""));
+        Assert.assertEquals(ad.findElementById("       "));
 
 
     }
