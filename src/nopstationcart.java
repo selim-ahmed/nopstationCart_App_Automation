@@ -17,9 +17,12 @@ public class nopstationcart{
         DesiredCapabilities dc = new DesiredCapabilities();
         dc.setCapability(MobileCapabilityType.DEVICE_NAME, "emulator-5554");
         dc.setCapability("platformName",  "android");
+        dc.setCapability("appPackage",  "com.nopstation.nopcommerce.nopstationcart");
+        dc.setCapability("appActivity",  "com.bs.ecommerce.main.SplashScreenActivity");
+
 
         //AndroidDriver<AndroidElement> ad = new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub",dc));
-        AndroidDriver ad = new AndroidDriver(new URL("127.0.0.1:4723/wd/hub"), dc);
+        AndroidDriver ad = new AndroidDriver(new URL("127.0.0.1:4723/wd/hub/"), dc);
 
 
         MobileElement el1 = (MobileElement) ad.findElementByAccessibilityId("NopStation Cart");
@@ -94,7 +97,7 @@ public class nopstationcart{
         MobileElement el35 = (MobileElement) ad.findElementById("com.nopstation.nopcommerce.nopstationcart:id/md_button_negative");
         el35.click();
 
-        Assert.assertEquals(ad.findElementById("       "));
+        Assert.assertEquals(ad.findElementById("ccom.nopstation.nopcommerce.nopstationcart:id/md_text_message").getText(),"Your order has been successfully processed");
 
 
     }
