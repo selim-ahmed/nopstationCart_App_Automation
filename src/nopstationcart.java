@@ -22,7 +22,7 @@ public class nopstationcart{
 
 
         //AndroidDriver<AndroidElement> ad = new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub",dc));
-        AndroidDriver ad = new AndroidDriver(new URL("127.0.0.1:4723/wd/hub/"), dc);
+        AndroidDriver ad = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub/"), dc);
 
 
         MobileElement el1 = (MobileElement) ad.findElementByAccessibilityId("NopStation Cart");
